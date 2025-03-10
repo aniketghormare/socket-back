@@ -8,6 +8,7 @@ const server = http.createServer(app);
 app.use(cors({
     origin: [
         "http://localhost:5173",
+        
         "https://fluffy-kangaroo-cbe22e.netlify.app"
     ],
     methods: ["GET", "POST"]
