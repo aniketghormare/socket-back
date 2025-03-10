@@ -5,18 +5,22 @@ const cors = require("cors");
 
 const app = express();
 const server = http.createServer(app);
-app.use(cors())
+app.use(cors({
+    origin: [
+        "http://localhost:5173",
+        "https://fluffy-kangaroo-cbe22e.netlify.app"
+    ],
+    methods: ["GET", "POST"]
+}));
+
 const io = new Server(server, {
     cors: {
         origin: [
-            "http://localhost:5173",     // Vite (Local)
-            "https://socket-back-2.onrender.com",
-            "https://fluffy-kangaroo-cbe22e.netlify.app/",
-            "https://your-frontend.vercel.app", // Vercel (Production)
-            "https://your-backend.onrender.com" // Render (Production)
+            "http://localhost:5173",   
+            "https://fluffy-kangaroo-cbe22e.netlify.app"  // Add your Netlify frontend URL
         ],
-        methods: ["GET", "POST"],
-    },
+        methods: ["GET", "POST"]
+    }
 });
 
 
