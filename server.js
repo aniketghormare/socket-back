@@ -11,6 +11,7 @@ const io = new Server(server, {
         origin: [
             "http://localhost:5173",     // Vite (Local)
             "https://socket-back-2.onrender.com",
+            "https://fluffy-kangaroo-cbe22e.netlify.app/",
             "https://your-frontend.vercel.app", // Vercel (Production)
             "https://your-backend.onrender.com" // Render (Production)
         ],
