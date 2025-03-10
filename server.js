@@ -10,6 +10,7 @@ const io = new Server(server, {
     cors: {
         origin: [
             "http://localhost:5173",     // Vite (Local)
+            "https://socket-back-2.onrender.com",
             "https://your-frontend.vercel.app", // Vercel (Production)
             "https://your-backend.onrender.com" // Render (Production)
         ],
